@@ -1,0 +1,101 @@
+.navbarBox {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    height: 60px;
+    padding: 0 20px; /* Add padding for spacing */
+    background-color: black;
+  }
+  .logo img {
+    width: 100px;
+    height: auto; /* Maintain aspect ratio */
+  }
+  input{
+    outline: none;
+    height: 28px;
+    border-radius: 1px;
+    background-color: #141414;
+    border: 1px solid #ccc;
+  }
+  input::placeholder{
+    padding-left: 6%;
+  }
+  p{
+    color: aliceblue;
+  }
+@media only screen and (min-width: 601px) {
+
+  
+  .buttons{
+    margin-left: 3%;
+    margin-top: 0%;
+   width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  input{
+    width: 20%;
+    margin-left: 340px;
+  }
+  button{
+    margin-left: 12px;
+    font-size: 17px;
+    font-weight: 200;
+  }
+  .dropdown{
+    display: none;
+  }
+  
+ 
+}
+
+@media only screen and (max-width: 601px) {
+        
+    .navbarBox {
+
+
+        justify-content: space-between;
+
+        background-color: black;
+      }
+      .logo img {
+         margin-left: 22px;
+      }
+
+  .dropdown {
+    position: absolute;
+    left: 0;
+    margin-right: 20px;
+    margin-left: 15px;
+  }
+  .buttons{
+   display: none;
+  }
+  input{
+    width: 38%;
+
+  }
+  
+  .dropdownButton {
+    color: aliceblue;
+    font-size: 30px;
+    transform: rotate(90deg);
+  }
+  
+  .box button{
+    margin: 10px;
+  }
+  .box {
+    width: 150px;
+    height: 200px;
+    background-color: black;
+    position: absolute;
+    top: 55px; /* Adjust the distance from the top */
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    padding: 10px;
+  }
+}

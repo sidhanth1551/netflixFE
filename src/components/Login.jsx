@@ -4,14 +4,22 @@ import "../css/login.css";
 import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import {useNavigate} from 'react-router-dom'
+import {useDispatch,useSelector} from 'react-redux';
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  updateProfile
 } from "firebase/auth";
 import { auth } from "../firebase/firebase";
 
 const Login = () => {
   const [isSignUpForm, setIsSignUpForm] = useState(false);
+  //const navigate = useNavigate();
+  const userObj = useSelector((state)=>state.user)
+
+
+
   const handleLogin = (e) => {
     e.preventDefault();
     console.log(`logging in...`);
@@ -74,7 +82,18 @@ const Login = () => {
               // Signed up
               const user = userCredential.user;
               console.log("user created->", user);
-              // ...
+              updateProfile(auth.currentUser, {
+                displayName: values.fname,
+                photoURL:'https://wallpapers.com/images/hd/netflix-profile-pictures-5yup5hd2i60x7ew3.jpg'
+              }).then((res) => {
+                // Profile updated!
+                console.log('profile update',res)
+              }).catch((error) => {
+                // An error occurred
+                console.log('error occured while updating profile name')
+              });
+             
+              console.log('obj',userObj)
             })
             .catch((error) => {
               const errorCode = error.code;
@@ -89,7 +108,9 @@ const Login = () => {
               // Signed in
               const user = userCredential.user;
               console.log("user logged in->", user);
-              // ...
+            //  navigate('/browse')
+              console.log('obj',userObj)
+
             })
             .catch((error) => {
               const errorCode = error.code;
@@ -101,7 +122,7 @@ const Login = () => {
     });
   return (
     <div>
-      <Header />
+      <Header navbarflag={false}/>
       <div className="absolute">
         <img
           src="https://assets.nflxext.com/ffe/siteui/vlv3/c0b69670-89a3-48ca-877f-45ba7a60c16f/2642e08e-4202-490e-8e93-aff04881ee8a/IN-en-20240212-popsignuptwoweeks-perspective_alpha_website_large.jpg"

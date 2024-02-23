@@ -1,0 +1,24 @@
+.logo{
+    position: absolute;
+    width: 250px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+.logo img{
+    width: 200px
+}
+.navbarlogo{
+    position: relative;
+    width: 150px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 601px) {
+    .navbarlogo{
+       padding: 12px;
+       
+    }
+}
