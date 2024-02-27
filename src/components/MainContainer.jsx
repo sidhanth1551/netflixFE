@@ -18,7 +18,7 @@ const MainContainer = () => {
   return (
     <div className='mc-box1'>
         <VideoTitle title={title} description={overview}/>
-        <VideoBackground movieId={id}/>
+        <VideoBackground movieId={id} mute={true}/>
     </div>
   )
 }

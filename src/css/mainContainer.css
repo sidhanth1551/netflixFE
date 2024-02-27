@@ -1,5 +1,6 @@
 @media screen and (max-width:600px) {
      .mc-box1{
         background-color: aqua;
+        margin-top: 5px;
      }
 }

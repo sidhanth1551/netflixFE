@@ -1,11 +1,12 @@
 .ml-box-2{
     display: flex;
-    width: 100vw;
-    
+    width: 97vw;
+    right: 0;
     overflow-x: scroll;
 }
 .ml-box-1{
     margin-top: 20px;
+
 }
 
 .ml-box-1 h1{

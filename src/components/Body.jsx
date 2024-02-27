@@ -7,6 +7,7 @@ import { useEffect } from 'react'
 import { auth } from "../firebase/firebase";
 import {useDispatch} from 'react-redux';
 import { addUser, removeUser } from '../redux/slices/userSlice'
+import PlayMovie from './PlayMovie';
 
 const Body = () => {
   
@@ -20,6 +21,7 @@ const Body = () => {
      <Routes>
         <Route path='/' element={<Login/>} />
         <Route path='/browse' element={<Browse/>}/>
+        <Route path='/play' element={<PlayMovie/>}/>
      </Routes>
     
     </BrowserRouter>

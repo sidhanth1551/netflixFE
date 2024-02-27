@@ -11,11 +11,14 @@ import useUpComing from "../customHooks/useUpComing";
 import useTopRatedMovies from "../customHooks/useTopRatedMovies";
 import { useState } from "react";
 import GptSearch from "./GptSearch";
+import PlayMovie from "./PlayMovie";
 
 const Browse = () => {
 
   const [gptPage,setGptPage] = useState(false)
- 
+  const moviePlayingFlag = useSelector(state=>state.movies.moviePlayingFlag)
+  const moviePlayingDetails = useSelector(state=>state.movies.moviePlaying)
+  console.log('yo',moviePlayingDetails,moviePlayingFlag)
    useNowPlayingMovies()
    usePopularMovies();
    useUpComing();
@@ -29,13 +32,16 @@ const Browse = () => {
   return (
     <div>
       <Navbar setGptPage={setGptPage} gptPage={gptPage}/>
-      {!gptPage&&<div className="b-box1">
+      {!gptPage&& !moviePlayingFlag &&(<div className="b-box1">
         <MainContainer/>
         <div className="b-box2">
-        <SecondaryContainer/>
+        <SecondaryContainer />
         </div>
 
-      </div>}
+      </div>)}
+      {!gptPage&& moviePlayingFlag &&(<div className="b-box1">
+         <PlayMovie moviePlayingDetails={moviePlayingDetails}/>
+      </div>)}
       {gptPage && <GptSearch/>}
     </div>
   );

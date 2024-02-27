@@ -10,7 +10,7 @@ const MovieList = ({title,movies}) => {
         </div>
         <div className='ml-box-2'>
         {movies && movies.map((item,idx)=>{
-          return  <MovieCard key={idx} url={item.poster_path}/>
+          return  <MovieCard key={idx} url={item.poster_path} movieDetails={item}/>
         })
 
         }

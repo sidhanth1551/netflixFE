@@ -1,7 +1,7 @@
 import React from "react";
 import useMovieTrailer from "../customHooks/useMovieTrailer";
 import "../css/videoBackground.css";
-const VideoBackground = ({ movieId }) => {
+const VideoBackground = ({ movieId,mute }) => {
   console.log("movieId", movieId);
   const trailer = useMovieTrailer(movieId);
   return (
@@ -13,7 +13,7 @@ const VideoBackground = ({ movieId }) => {
             src={
               "https://www.youtube.com/embed/" +
               trailer?.key +
-              "?&autoplay=1&mute=1"
+              "?&autoplay=1&mute="+mute
             }
             title="YouTube video player"
             frameBorder="0"
