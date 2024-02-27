@@ -1,0 +1,34 @@
+.mcard-box1{
+    width: 180px;
+    height: 270px;
+    margin: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.mc-box1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.mcard-box1:hover {
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    z-index: 1;
+    width: 280px;
+    height: 370px;
+    
+  }
+  
+  .mcard-box1:hover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adjust object-fit as per your requirement */
+  }
+
+  @media screen and (max-width: 600px){
+          .mcard-box1{
+            width: 110px;
+            height: 150px;
+          }
+  }

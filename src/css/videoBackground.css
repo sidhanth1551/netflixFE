@@ -4,8 +4,10 @@
     position: absolute;
     width: 100%;
     height: 100vh;
+    pointer-events: none;
 
 }
+
 .vb-box2{
     width: 100%;
     position: absolute;
@@ -23,12 +25,13 @@
 
 .vb-box1 iframe{
     width: 100%;
-    height: 100%;
+    height: 120%;
 }
 
 @media screen and (max-width:601px) {
     .vb-box1{
-        height: 50vh;
-        
+        height: 60vh;
+        top:6%;
+        z-index: 0;
     }
 }

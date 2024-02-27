@@ -13,12 +13,13 @@
     width: 150px;
     z-index: 2;
     display: flex;
+
     justify-content: center;
 }
 
 @media only screen and (max-width: 601px) {
     .navbarlogo{
        padding: 12px;
-       
+       margin-left: 20px;
     }
 }

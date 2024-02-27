@@ -4,7 +4,7 @@ import Header from "./Header";
 import {  signOut } from "firebase/auth";
 import {auth} from '../firebase/firebase.js'
 
-const Navbar = () => {
+const Navbar = ({setGptPage,gptPage}) => {
   const [showDropdown, setShowDropdown] = useState(false);
   const buttonsArray = [
     "Home",
@@ -45,13 +45,19 @@ const Navbar = () => {
       </div> */}
       <Header navbarflag={true}/>
       <div className="buttons">{renderButtons()}</div>
-      <input type='text' placeholder='Search'/>
-      <button style={{color:'gray',marginTop:0,marginLeft:14,marginRight:0}} onClick={handleSignout}>Signout</button>
+      {/* <input type='text' placeholder='Search'/> */}
+      <div className="nb-box2">
+      <button className="nb-box2-b1" onClick={()=>setGptPage(!gptPage)}>{gptPage?'Home': 'Search'}</button>
+      <button className="nb-box2-b2"  onClick={handleSignout}>Sign Out</button>
+      </div>
       <div className="dropdown">
         <button className="dropdownButton" onClick={handleDropDown}>
           |||
         </button>
-        {showDropdown && <div className="box">{renderButtons()}</div>}
+        {showDropdown && <div className="box">
+          {renderButtons()}
+          <button  onClick={handleSignout}>Sign Out</button>
+          </div>}
       </div>
     </div>
   );

@@ -23,17 +23,36 @@
   p{
     color: aliceblue;
   }
+  .nb-box2 .nb-box2-b1{
+   color: 	#f9131f;
+   font-weight: 300;
+   border: 1px solid #f9131f;
+   padding: 4px;
+   margin-right: 5px;
+ }
+ .nb-box2 button{
+  width: 100px;
+  margin: 0;
+  padding: 4px;
+}
 @media only screen and (min-width: 601px) {
 
   
   .buttons{
     margin-left: 3%;
     margin-top: 0%;
-   width: 600px;
+    width: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+  .nb-box2{
+    display: flex;
+    position: absolute;
+    right: 0;
+  }
+ 
+  
   input{
     width: 20%;
     margin-left: 340px;
@@ -63,6 +82,17 @@
          margin-left: 22px;
       }
 
+      .nb-box2{
+        display: flex;
+        position: absolute;
+        right: 0;
+      }
+      .nb-box2 button{
+        display: flex;
+        width: 80px;
+        margin-top: 0;
+      }
+
   .dropdown {
     position: absolute;
     left: 0;
@@ -76,6 +106,14 @@
     width: 38%;
 
   }
+  .nb-box2 .nb-box2-b1{
+    right:4;
+    width: 100px;
+    justify-content: center;
+ }
+  .nb-box2 .nb-box2-b2{
+     display: none;
+  }
   
   .dropdownButton {
     color: aliceblue;
@@ -88,7 +126,7 @@
   }
   .box {
     width: 150px;
-    height: 200px;
+    height: 230px;
     background-color: black;
     position: absolute;
     top: 55px; /* Adjust the distance from the top */

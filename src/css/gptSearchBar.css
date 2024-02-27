@@ -1,0 +1,92 @@
+.gsb-box0{
+    position: relative;
+    
+}
+
+
+.gsb-box1{
+    background-color: black;
+    height: 110vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.6;
+}
+.gsb-box3{
+    position: relative;
+}
+
+.gsb-box2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    background-color: rgb(36, 34, 34,0.8);
+    width:700px;
+    height: 69px;
+    border-radius: 1px;
+
+}
+.gsb-box2 input{
+    margin: 10px;
+    width: 570px;
+    height: 50px;
+    outline: none;
+    border: 0;
+    margin-right: 3px;
+    color: aliceblue;
+    padding-left: 25px;
+}
+
+.gsb-box2::placeholder{
+    padding-left: 0px;
+}
+
+.gsb-box2 button{
+    margin: 10px;
+    margin-left: 0;
+    height: 50px;
+    background-color: #c80a14;
+    width: 130px;
+}
+
+@media screen and (max-width:600px) {
+     .gsb-box3 img{
+         height: 100vh;
+         width: 300vh;
+     }
+     .gsb-box3{
+        height: 400px;
+     }
+     .gsb-box1{
+        opacity: 0.8;
+     }
+
+     .gsb-box2{
+        display: flex;
+        flex-direction: column;
+        width:350px;
+        height: 99px;
+        border-radius: 1px;
+     }
+     .gsb-box2 input{
+        /* margin: 10px; */
+        width: 300px;
+        height: 100px;
+    }
+    .gsb-box2 button{
+        /* margin: 10px; */
+        margin-left: 0;
+        height: 70px;
+        background-color: #c80a14;
+        width: 130px;
+    }
+    .gsb-box2 input::placeholder{
+        padding-left: 0px;
+        font-size: 12px;
+    }
+}

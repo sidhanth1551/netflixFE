@@ -1,0 +1,16 @@
+.sc-box1{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 600px;
+    z-index: 2;
+
+}
+
+.sc-box2{
+    display: flex;
+    flex-direction: column;
+    margin-top: -50px;
+    z-index: 2;
+
+}

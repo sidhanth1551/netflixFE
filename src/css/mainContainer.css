@@ -1,4 +1,5 @@
-.mc-box1{
-    display: flex;
-    position: relative;
+@media screen and (max-width:600px) {
+     .mc-box1{
+        background-color: aqua;
+     }
 }
